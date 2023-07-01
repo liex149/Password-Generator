@@ -20,8 +20,17 @@ function writePassword() {
     writePassword();
   }
 
-  
-}
+  let tfUpper = confirm("Would you like upper cases?");
+  if (tfUpper == true) {
+    password = password + upperCase;
+  }
+  console.log(password);
+
+
+  }
+
+
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
