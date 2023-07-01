@@ -44,9 +44,10 @@ function writePassword() {
   }
   console.log(password);
 
-
-
-
+  if (password == "") {
+    alert("Please chose again!");
+    writePassword();
+  }
 
 }
 
