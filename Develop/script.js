@@ -38,6 +38,13 @@ function writePassword() {
   }
   console.log(password);
 
+  let tfspecialChar = confirm("Would you like special characters?");
+  if (tfspecialChar == true) {
+    password = password + specialChar;
+  }
+  console.log(password);
+
+
 
 
 
