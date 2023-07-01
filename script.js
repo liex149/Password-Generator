@@ -9,12 +9,13 @@ let generateBtn = document.querySelector("#generate");
 function writePassword() {
   let password = "";
   let passwordText = document.querySelector("#password");
+  passwordText.textContent = " "
 
-  let pwlength = prompt("enter length here");
-  if (pwlength == null) { return; }
-  if (pwlength < 8 || pwlength > 128) {
+  let pwlength = prompt("Enter Length Here");
+  if (pwlength == null) { return;}
+  if (pwlength < 7 || pwlength > 128) {
     alert("Please select between 8-128 characters");
-    writePassword();
+    return writePassword();
   }
 
   let tfUpper = confirm("Would you like upper cases?");
@@ -41,17 +42,15 @@ function writePassword() {
   }
   console.log(password);
 
-  if (password == "") {
+  if (password === "") {
     alert("Please chose again!");
-    writePassword();
+    return writePassword();
   }
-
-  passwordText.textContent = password[Math.floor(Math.random() * password.length)];
 
   for (let i = 0; i < pwlength; i++) {
     passwordText.textContent += password[Math.floor(Math.random() * password.length)];
+  
   }
 
 }
-
 generateBtn.addEventListener("click", writePassword);
