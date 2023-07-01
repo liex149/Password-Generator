@@ -2,8 +2,8 @@
 let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let lowerCase = "abcdefghijklmnopqrstuvwxyz";
 let numeric = "0123456789";
-let specialChar = "!#$%&'()*+,-./:;<=>?@[]^_{|}~";
-
+let specialChar = "!#$%&'()*+,-./:;<=>?@[]^_{|}~" + "\\" +'"';
+console.log(specialChar);
 let generateBtn = document.querySelector("#generate");
 
 function writePassword() {
@@ -15,7 +15,7 @@ function writePassword() {
   if (pwlength == null) { 
     return;
   }
-  if (!(pwlength > 8) || !(pwlength < 128)) {
+  if (!(pwlength > 7) || !(pwlength < 129)) {
     alert("Please select between 8-128 characters");
     return writePassword();
   }
