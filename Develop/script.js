@@ -49,6 +49,15 @@ function writePassword() {
     writePassword();
   }
 
+
+  passwordText.textContent = password[Math.floor(Math.random() * password.length)];
+
+  for (let i = 0; i < pwlength; i++) {
+    passwordText.textContent += password[Math.floor(Math.random() * password.length)];
+
+    
+  }
+
 }
 
 // Add event listener to generate button
