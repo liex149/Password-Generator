@@ -32,6 +32,15 @@ function writePassword() {
   }
   console.log(password);
 
+  let tfnumeric = confirm("Would you like numbers?");
+  if (tfnumeric == true) {
+    password = password + numeric;
+  }
+  console.log(password);
+
+
+
+
 }
 
 // Add event listener to generate button
