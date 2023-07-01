@@ -26,11 +26,13 @@ function writePassword() {
   }
   console.log(password);
 
-
+  let tfLower = confirm("Would you like lower cases?");
+  if (tfLower == true) {
+    password = password + lowerCase;
   }
+  console.log(password);
 
-
-
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
