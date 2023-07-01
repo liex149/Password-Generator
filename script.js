@@ -15,7 +15,7 @@ function writePassword() {
   if (pwlength == null) { 
     return;
   }
-  if (!(pwlength > 8) && !(pwlength < 128)) {
+  if (!(pwlength > 8) || !(pwlength < 128)) {
     alert("Please select between 8-128 characters");
     return writePassword();
   }
