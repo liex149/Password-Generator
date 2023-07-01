@@ -12,8 +12,10 @@ function writePassword() {
   passwordText.textContent = " "
 
   let pwlength = prompt("Enter Length Here");
-  if (pwlength == null) { return;}
-  if (pwlength < 8 || pwlength > 128) {
+  if (pwlength == null) { 
+    return;
+  }
+  if (!(pwlength > 8) && !(pwlength < 128)) {
     alert("Please select between 8-128 characters");
     return writePassword();
   }
