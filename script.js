@@ -3,17 +3,18 @@ let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let lowerCase = "abcdefghijklmnopqrstuvwxyz";
 let numeric = "0123456789";
 let specialChar = "!#$%&'()*+,-./:;<=>?@[]^_{|}~" + "\\" +'"';
-console.log(specialChar);
+
 let generateBtn = document.querySelector("#generate");
 
 // function for random generator
 function writePassword() {
   let password = "";
   let passwordText = document.querySelector("#password");
+  
   passwordText.textContent = " "
 
   // Entered length if wrong character then uder will be redirected 
-  let pwlength = prompt("Enter Length Here");
+  let pwlength = Math.trunc(prompt("Enter Length Here"));
   if (pwlength == null) { 
     return;
   }
@@ -52,7 +53,7 @@ function writePassword() {
   // generates random characters
   for (let i = 0; i < pwlength; i++) {
     passwordText.textContent += password[Math.floor(Math.random() * password.length)];
-  
+    
   }
 
 }
